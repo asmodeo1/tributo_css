@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- tipo de letra: https://www.dafont.com/es/anger-styles.font -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Definimos un tipo de letra a usar */
+      @font-face {
+        font-family: wrath; /* Un nombre cualquiera que usaremos luego */
+        src: url(fuentes/WrathStyles.ttf);
+      }
+      body {
+        background-color: black;
+        background-image: url(gandalf2.jpg);
+        background-attachment: fixed; /* Hacemos el fondo fijo */
+      }
+      header h1 {
+        font-size: 8em;
+        color: goldenrod;
+        text-align: center;
+        font-family: wrath;
+        /* Podemos poner más de una sombra */
+        text-shadow: 2px 2px 2px black, 2px 2px 50px rgb(252, 252, 252);
+      }
+      main {
+        /* Dejamos un espacio entre el primer texto y el encabezado */
+        margin-top: 15em;
+      }
+      q {
+        color: gold;
+        font-size: 2em;
+        font-style: italic;
+        text-align: center;
+        display: block; /* q es de tipo inline */
+        background-color: rgba(0, 0, 0, 0.2);
+        text-shadow: 2px 2px 2px black;
+        margin: 2em;
+      }
+      #fotos {
+        text-align: center;
+      }
+      .foto {
+        /* Para poder poner los divs de las fotos uno al lado de otros */
+        display: inline-block;
+        margin: 10px;
+        padding: 0;
+      }
+      .foto img {
+        border: 2px solid white;
+        vertical-align: bottom; /* Para quitar un pequeño espacio que queda entre la imagen y el texto */
+      }
+      .foto img:hover {
+        border: 2px solid gold;
+        /* Ponemos la imagen en escala de grises */
+        filter: grayscale();
+      }
+      .foto img:hover + p {
+        background-color: lightgray;
+      }
+      .foto p {
+        margin: 0;
+        background-color: white;
+        text-align: center;
+        padding: 5px;
+        font-style: italic;
+      }
+      nav {
+        text-align: right;
+      }
+      nav ul {
+        list-style-type: none;
+      }
+      nav li {
+        /* Ponemos los elemento de la lista horizontalmente */
+        display: inline-block;
+        margin-right: 2em;
+      }
+      nav li a {
+        color: gold;
+        font-weight: bold;
+        /* Le quitamos el subrayado al enlace */
+        text-decoration: none;
+        font-size: 1.2em;
+        font-family: "Courier New", Courier, monospace;
+      }
+      nav li a:hover {
+        border-bottom: 1px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="">Inicio</a></li>
+        <li><a href="">Info</a></li>
+        <li><a href="">Contacto</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Tributo a Gandalf</h1>
+    </header>
+    <main>
+      <q
+        >No es importante saber cuánto tiempo queda, sino qué hacer con el
+        tiempo que se te concede.</q
+      >
+      <q
+        >El viaje no termina aquí. La muerte solo es un camino que todos tenemos
+        que tomar.</q
+      >
+      <q>No diré no lloréis, pues no todas las lágrimas son amargas.</q>
+      <q>Solo tú puedes decidir con el tiempo que te has dado.</q>
+      <q
+        >Es sabiduría reconocer la necesidad, cuando todos los otros cursos ya
+        han sido considerados, aunque pueda parecer locura a aquellos que se
+        atan a falsas esperanzas.</q
+      >
+      <section id="fotos">
+        <div class="foto">
+          <img src="fotos/f1.jpeg" alt="" />
+          <p>Foto 1</p>
+        </div>
+        <div class="foto">
+          <img src="fotos/f2.jpg" alt="" />
+          <p>Foto 2</p>
+        </div>
+        <div class="foto">
+          <img src="fotos/f3.jpg" alt="" />
+          <p>Foto 3</p>
+        </div>
+        <div class="foto">
+          <img src="fotos/f4.webp" alt="" />
+          <p>Foto 4</p>
+        </div>
+        <div class="foto">
+          <img src="fotos/f5.jpg" alt="" />
+          <p>Foto 5</p>
+        </div>
+        <div class="foto">
+          <img src="fotos/f6.webp" alt="" />
+          <p>Foto 6</p>
+        </div>
+        <div class="foto">
+          <img src="fotos/f7.jpg" alt="" />
+          <p>Foto 7</p>
+        </div>
+        <div class="foto">
+          <img src="fotos/f8.jpg" alt="" />
+          <p>Foto 8</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
