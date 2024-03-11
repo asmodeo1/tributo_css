@@ -8,3 +8,5 @@ Algunos de los conceptos que usamos:
 - uso de un filtro de escala de grises para cuando se pase el ratón por encima de las fotos
 - uso de fuentes personalizadas
 - uso de sombras
+
+Tipo de letra:  https://www.dafont.com/es/anger-styles.font
