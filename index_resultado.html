@@ -14,13 +14,14 @@
       body {
         background-color: black;
         background-image: url(fotos/gandalf.jpg);
-        background-attachment: fixed; /* Hacemos el fondo fijo */
+        background-attachment: fixed; /* Hacemos el fondo fijo con lo que no se moverá 
+                                al desplazarnos por la página */
       }
       header h1 {
         font-size: 8em;
         color: goldenrod;
         text-align: center;
-        font-family: wrath;
+        font-family: wrath; /* es el nombre que le dimos en @font-face
         /* Podemos poner más de una sombra */
         text-shadow: 2px 2px 2px black, 2px 2px 50px rgb(252, 252, 252);
       }
@@ -32,14 +33,20 @@
         color: gold;
         font-size: 2em;
         font-style: italic;
-        text-align: center;
-        display: block; /* q es de tipo inline */
+        text-align: center;        
+        /* rgba para poder poner un cuarto parámetro con la transparencia, que va
+        de 0 (totalmente transparente) a 1 (totalmente opaco) */
         background-color: rgba(0, 0, 0, 0.2);
-        text-shadow: 2px 2px 2px black;
+        /* Somrba del texto: 
+        - primer 2px: 2 píxeles a la derecha
+        - segundo 2px: 2 píxeles hacia abajo
+        - tercer 2px: difuminado de la sombra*/
+        text-shadow: 2px 2px 2px black; 
+        display: block; /* q es de tipo inline y queremos poder darle márgenes superior e inferior */
         margin: 2em;
       }
       #fotos {
-        text-align: center;
+        text-align: center; /* Centar elementos de tipo inline o inline-block */
       }
       .foto {
         /* Para poder poner los divs de las fotos uno al lado de otros */
@@ -49,13 +56,21 @@
       }
       .foto img {
         border: 2px solid white;
-        vertical-align: bottom; /* Para quitar un pequeño espacio que queda entre la imagen y el texto */
+        /* Entre la imagen de la foto y el texto de debajo, queda un pequeño espacio
+        debido a q ue img es un elemento en línea. Una manera de arreglarlo en este caso es: */
+        vertical-align: bottom; 
+        /* Otra opción sería poner display: block; para convertirlo en elemento en bloque
+        display: block; */
       }
-      .foto img:hover {
+      .foto img:hover { /* Al pasar el ratón sobre la imagen */
         border: 2px solid gold;
-        /* Ponemos la imagen en escala de grises */
+        /* Ponemos la imagen en escala de grises.
+        Tenemos también filtros de brillo, contraste, opacidad, desenfoque,... */
         filter: grayscale();
       }
+      /* Cuando el ratón pase sobre las imágenes que estén dentro de un elemento
+      con la clase foto, modificamos el primer p que sea su hermano, no debiendo haber
+      otros hermanos entre ambos */
       .foto img:hover + p {
         background-color: lightgray;
       }
@@ -67,10 +82,10 @@
         font-style: italic;
       }
       nav {
-        text-align: right;
+        text-align: right; /* Queremos el menú a la derecha */
       }
       nav ul {
-        list-style-type: none;
+        list-style-type: none; /* quitamos los puntos de los elementos de la lista */
       }
       nav li {
         /* Ponemos los elemento de la lista horizontalmente */
